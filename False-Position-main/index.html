@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Root Finding Methods</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Root Finding Methods</h1>
+
+    <form id="rootFinderForm">
+        <label for="equation">Equation:</label>
+        <input type="text" id="equation" required><br>
+
+        <label for="a">First Endpoint (a):</label>
+        <input type="number" id="a" step="any" required><br>
+
+        <label for="b">Second Endpoint (b):</label>
+        <input type="number" id="b" step="any" required><br>
+
+        <label for="initialGuess">Initial Guess:</label>
+        <input type="number" id="initialGuess" placeholder="Enter initial guess"><br>
+
+        <label for="tolerance">Tolerance:</label>
+        <input type="number" id="tolerance" step="any" required><br>
+
+        <button type="button" id="falsePositionBtn">False Position</button>
+        <button type="button" id="bisectionBtn">Bisection</button>
+        <button type="button" id="newtonRaphsonBtn">Newton-Raphson</button>
+        <button type="button" id="secantBtn">Secant</button>
+    </form>
+
+    <h2>Iterations:</h2>
+    <table id="iterations">
+        <tr>
+            <th>Method</th>
+            <th>Iteration</th>
+            <th>a</th>
+            <th>b</th>
+            <th>Root</th>
+            <th>f(a)</th>
+            <th>f(b)</th>
+            <th>f(root)</th>
+        </tr>
+    </table>
+
+    <h2>Results:</h2>
+    <div id="resultsDashboard">
+        <p>Result: <span id="result"></span></p>
+    </div>
+
+    <div id="equationOutput"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
